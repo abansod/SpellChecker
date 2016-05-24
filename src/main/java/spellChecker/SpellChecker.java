@@ -14,8 +14,10 @@ public class SpellChecker {
     static {
         FileReader reader;
         try {
-            String FILE = "D:\\Focus\\SpellChecker\\src\\main\\resources\\wordlist.txt";
+            String FILE = "src\\main\\resources\\wordlist.txt";
+            System.out.println(new File("").getAbsolutePath());
             reader = new FileReader(new File(FILE));
+
             BufferedReader buffReader = new BufferedReader(reader);
             String word;
 
