@@ -6,5 +6,10 @@ pipeline {
         sh 'echo "build"'
       }
     }
+    stage('package') {
+      steps {
+        input 'should I proceed'
+      }
+    }
   }
 }
