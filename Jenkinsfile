@@ -14,6 +14,7 @@ pipeline {
     stage('deploy') {
       steps {
         build(wait: true, job: 'deploy-ci')
+        echo 'hello'
       }
     }
   }
