@@ -11,5 +11,10 @@ pipeline {
         input 'should I proceed'
       }
     }
+    stage('deploy') {
+      steps {
+        build(wait: true, job: 'deploy-ci')
+      }
+    }
   }
 }
